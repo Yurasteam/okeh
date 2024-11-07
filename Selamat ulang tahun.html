@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun ke-20, Nofelin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-image: url('Nofelinn.jpg'); /* Gambar latar belakang Nofelinn.jpg */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            height: 80%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .slide {
+            display: none;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .active {
+            display: block;
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 1.4em;
+            line-height: 1.6;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        /* Animasi untuk fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF4500;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Slide 1 -->
+        <div id="slide1" class="slide active">
+            <h1>Halooo Nofelinn Solagratia Pajow, Apa Kabar Mu?</h1>
+            <div class="message">
+                <p>Hari ini kamu ulang tahun kan? Coba deh, rasain... bagaimana rasanya 20 tahun sudah hidup!</p>
+            </div>
+            <div class="button-container">
+                <button class="btn" onclick="nextSlide(2)">Selanjutnya</button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div id="slide2" class="slide">
+            <h1>Selamat Ulang Tahun ke-20, Adik</h1>
+            <div class="message">
+                <p>So 20 taon ngana skarang! Rasa baru kemarin ngana masih kecil, lari-lari sana sini. Sekarang ngana so jadi dewasa, tambah keren, tambah bijak. Dua dekade ini bukan waktu yang sebentar; setiap taon yang lewat, ngana so lewat banyak cerita, tawa, air mata, jatuh bangun, tapi semuanya bikin ngana jadi orang hebat kaya skarang.</p>
+            </div>
+            <div class="button-container">
+                <button class="btn" onclick="nextSlide(3)">Selanjutnya</button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div id="slide3" class="slide">
+            <h1>Ucapan Selamat Ulang Tahun yang Panjang</h1>
+            <div class="message">
+                <p>Umur 20 taon ini beda, bukan cuma angka. Ini tanda kalau hidup ngana semakin masuk di fase baru, tantangan baru, dan pastinya mimpi-mimpi yang tambah besar. Jangan pernah ragu atau takut ambil langkah besar, karna hidup ini hanya sekali, dan ngana pantas buat wujudkan semua cita-cita ngana. Ingat jo, banya orang yang selalu ada buat ngana, mendukung dari belakang, percaya kalau ngana bisa capai yang terbaik!</p>
+                <p>Jadi diri sendiri, jalan dengan percaya diri, tapi tetap rendah hati, bae. Hidup ini kadang-kadang ada susahnya, ada sedihnya, tapi percayalah, ngana so punya semua yang dibutuhkan buat jalani semuanya. Ngana anak yang kuat, berani, dan kita tau kalau ngana pasti bisa lewati apa saja.</p>
+                <p>Semoga tahun ini penuh tawa, kebahagiaan, dan kesempatan-kesempatan baru buat ngana. Tetap jadi berkat buat semua orang di sekitar ngana, dan jangan lupa untuk selalu bersyukur atas setiap hal yang Tuhan kase. Jalani hari-hari dengan hati yang gembira, jangan terlalu pusing atau stress, karna yang paling penting adalah ngana bahagia.</p>
+                <p>Selamat ulang tahun ke-20, Nofelin Solagratia Pajow! Terus jadi orang yang hebat, tetap jadi inspirasi buat orang laeng, dan jangan lupa selalu bersenang-senang dalam perjalanan hidup ngana ini. Dunia ini luas, dan ada begitu banyak hal menakjubkan yang menunggu ngana. Doa terbaik for ngana selalu! 🎈🥳</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function nextSlide(slideNumber) {
+            document.getElementById('slide' + currentSlide).classList.remove('active');
+            currentSlide = slideNumber;
+            document.getElementById('slide' + currentSlide).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
